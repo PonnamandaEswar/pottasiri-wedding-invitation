@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#5C0A1E">
+<title>Pottasiri’s Wedding Invitation — Sai Prasanna &amp; Mohan | 21 Nov 2026</title>
+<meta name="description" content="Pottasiri family warmly invites you to celebrate Sai Prasanna and Mohan’s wedding on 21 November 2026 at Sri Balaji Grand Convention Center, Beeramguda, Hyderabad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&family=Noto+Serif+Telugu:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#5C0A1E; --maroon2:#7B1E2B; --maroon3:#3D0512;
+  --gold:#C9A227; --gold2:#D4AF37; --gold3:#F1D27A; --gold-dark:#9A7B1A;
+  --cream:#FFF8E7; --ivory:#FFFBEB; --paper:#FDF3D8;
+  --text:#4A2C1A; --muted:#7A5A3A;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Poppins',system-ui,sans-serif;color:var(--text);
+  background:#2B030C;
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(212,175,55,.18), transparent 40%),
+    radial-gradient(circle at 80% 90%, rgba(123,30,43,.5), transparent 50%),
+    repeating-linear-gradient(45deg, rgba(212,175,55,.03) 0 2px, transparent 2px 14px);
+  min-height:100vh;
+}
+.app{max-width:520px;margin:0 auto;background:var(--ivory);position:relative;overflow:hidden;box-shadow:0 0 60px rgba(0,0,0,.6);min-height:100vh}
+@media(min-width:600px){.app{border-left:1px solid rgba(212,175,55,.4);border-right:1px solid rgba(212,175,55,.4)}}
+
+/* ---------- PETALS CANVAS ---------- */
+#petals{position:fixed;inset:0;pointer-events:none;z-index:60;max-width:520px;left:50%;transform:translateX(-50%)}
+
+/* ---------- ENVELOPE OVERLAY ---------- */
+#envelope{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;background:radial-gradient(circle at 50% 30%, #7B1E2B, #3D0512 70%);transition:opacity .8s ease, visibility .8s}
+#envelope.open{opacity:0;visibility:hidden}
+.env-card{width:100%;max-width:420px;background:linear-gradient(160deg,#FFF8E7,#FDF0C8);border:2px solid var(--gold);outline:6px double rgba(201,162,39,.5);outline-offset:-12px;border-radius:18px;padding:38px 24px 30px;text-align:center;position:relative;box-shadow:0 30px 60px rgba(0,0,0,.5);animation:envIn .9s ease both}
+@keyframes envIn{from{opacity:0;transform:translateY(30px) scale(.96)}to{opacity:1;transform:none}}
+.env-om{width:74px;height:74px;margin:0 auto 10px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,#fff,#FDEEC0);font-family:'Cinzel',serif;font-size:34px;color:var(--maroon);box-shadow:0 6px 18px rgba(154,123,26,.35)}
+.env-small{letter-spacing:.35em;font-size:10px;text-transform:uppercase;color:var(--gold-dark);font-weight:600}
+.env-names{font-family:'Great Vibes',cursive;font-size:44px;line-height:1.15;color:var(--maroon);margin:12px 0 4px}
+.env-names span{display:block;font-size:28px;color:var(--gold-dark)}
+.env-date{display:inline-block;margin:14px 0 6px;padding:8px 18px;border:1px solid var(--gold);border-radius:999px;background:#fff;font-family:'Cinzel',serif;font-weight:700;letter-spacing:.12em;color:var(--maroon);font-size:13px}
+.env-text{font-size:13px;color:var(--muted);line-height:1.6;margin:10px 0 20px}
+.btn-open{width:100%;padding:15px;border:none;border-radius:999px;background:linear-gradient(135deg,var(--maroon2),var(--maroon));color:#FFEFC0;font-family:'Cinzel',serif;font-weight:700;letter-spacing:.15em;font-size:13px;cursor:pointer;box-shadow:0 10px 24px rgba(92,10,30,.35);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.env-hint{margin-top:12px;font-size:11px;color:#9A7B1A;letter-spacing:.08em}
+
+/* ---------- TOP BAR ---------- */
+.topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:rgba(92,10,30,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(212,175,55,.5)}
+.topbar .brand{font-family:'Cinzel',serif;color:#F1D27A;font-size:12px;letter-spacing:.18em;font-weight:700}
+.topbar .brand small{display:block;font-family:'Poppins';letter-spacing:.05em;font-weight:400;font-size:9px;color:#E8CFCF;text-transform:uppercase}
+.lang-toggle{display:flex;background:rgba(255,255,255,.12);border:1px solid rgba(212,175,55,.6);border-radius:999px;padding:3px}
+.lang-toggle button{border:none;background:transparent;color:#FFEFC0;font-size:11px;font-weight:600;padding:6px 12px;border-radius:999px;cursor:pointer;font-family:'Poppins'}
+.lang-toggle button.active{background:var(--gold2);color:var(--maroon3)}
+
+
+/* ---------- HERO ---------- */
+.hero{background:linear-gradient(180deg,#5C0A1E 0%,#7B1E2B 55%,#8A2438 100%);color:#FFF8E7;text-align:center;padding:28px 20px 0;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(241,210,122,.18) 1px, transparent 1px);background-size:22px 22px;opacity:.5}
+.mandala{position:absolute;left:50%;top:-90px;transform:translateX(-50%);width:340px;height:340px;opacity:.18;animation:spin 40s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:translateX(-50%) rotate(360deg)}}
+.hero-inner{position:relative;z-index:2}
+.shubh{font-family:'Cinzel',serif;letter-spacing:.4em;font-size:10px;color:var(--gold3);text-transform:uppercase}
+.ganesha{width:64px;height:64px;margin:12px auto 4px;border-radius:50%;border:1.5px solid var(--gold2);background:rgba(255,248,231,.08);display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 0 0 6px rgba(212,175,55,.12)}
+.hero h1{font-family:'Great Vibes',cursive;font-weight:400;font-size:52px;line-height:1.05;margin:10px 0 2px;color:#FFF3C4;text-shadow:0 4px 20px rgba(0,0,0,.35)}
+.hero h1 .amp{font-size:34px;color:var(--gold3)}
+.hero .tag{font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:#F5D9D9;letter-spacing:.04em}
+.date-pill{display:inline-flex;gap:10px;align-items:center;margin:16px auto 6px;background:rgba(255,248,231,.1);border:1px solid rgba(241,210,122,.6);border-radius:999px;padding:8px 16px;font-family:'Cinzel',serif;font-size:12px;letter-spacing:.12em;color:#FFF3C4}
+.date-pill b{font-size:16px;color:#fff}
+.arch-wrap{margin:18px auto 0;width:88%;max-width:380px;position:relative}
+.arch{border-radius:190px 190px 14px 14px;overflow:hidden;border:3px solid var(--gold2);outline:1px solid rgba(241,210,122,.7);outline-offset:5px;box-shadow:0 24px 50px rgba(0,0,0,.45);background:#3D0512}
+.arch img{width:100%;height:420px;object-fit:cover;display:block}
+.arch-caption{position:absolute;left:50%;transform:translateX(-50%);bottom:12px;background:rgba(61,5,18,.88);border:1px solid var(--gold2);color:#FFEFC0;padding:7px 16px;border-radius:999px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+.hero-bottom{height:26px;background:var(--ivory);border-radius:26px 26px 0 0;margin-top:-6px;position:relative;z-index:3}
+
+/* ---------- COUNTDOWN ---------- */
+.section{padding:26px 20px 8px}
+.sec-head{text-align:center;margin-bottom:16px}
+.sec-head .kicker{font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold-dark);font-weight:600}
+.sec-head h2{font-family:'Playfair Display',serif;font-size:26px;color:var(--maroon);margin-top:6px}
+.divider{display:flex;align-items:center;gap:10px;justify-content:center;margin:10px auto 0;max-width:220px}
+.divider::before,.divider::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold))}
+.divider::after{background:linear-gradient(90deg,var(--gold),transparent)}
+.divider span{color:var(--gold-dark);font-size:16px}
+.count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.count-box{background:linear-gradient(160deg,#fff,#FFF3D6);border:1.5px solid var(--gold);border-radius:14px;padding:14px 6px;text-align:center;box-shadow:0 8px 20px rgba(154,123,26,.15);position:relative;overflow:hidden}
+.count-box::after{content:"";position:absolute;inset:4px;border:1px solid rgba(201,162,39,.35);border-radius:10px;pointer-events:none}
+.count-box b{font-family:'Cinzel',serif;font-size:26px;color:var(--maroon);display:block;line-height:1}
+.count-box small{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-dark);font-weight:600}
+
+/* ---------- CARD ---------- */
+.card{background:#fff;border:1.5px solid var(--gold);border-radius:18px;padding:22px 18px;position:relative;box-shadow:0 12px 30px rgba(92,10,30,.08)}
+.card::before{content:"";position:absolute;inset:6px;border:1px solid rgba(201,162,39,.35);border-radius:13px;pointer-events:none}
+.card p{font-size:14px;line-height:1.75;color:#5A3A22;text-align:center}
+.card p b{color:var(--maroon)}
+.telugu{font-family:'Noto Serif Telugu',serif}
+.hidden{display:none!important}
+
+/* ---------- COUPLE ---------- */
+.couple-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.person{background:linear-gradient(180deg,#fff,#FFF6DE);border:1.5px solid var(--gold);border-radius:16px;padding:18px 12px;text-align:center;position:relative}
+.person .avatar{width:72px;height:72px;margin:0 auto 10px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#FFEFC0,var(--gold2));display:flex;align-items:center;justify-content:center;font-family:'Great Vibes',cursive;font-size:36px;color:var(--maroon);border:2px solid #fff;box-shadow:0 6px 16px rgba(154,123,26,.3)}
+.person h3{font-family:'Playfair Display',serif;font-size:18px;color:var(--maroon);line-height:1.2}
+.person .role{font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin:6px 0}
+.person p{font-size:11.5px;line-height:1.6;color:var(--muted)}
+.heart-mid{display:flex;align-items:center;justify-content:center;margin:14px 0;font-size:22px;color:var(--maroon2)}
+.heart-mid::before,.heart-mid::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--gold))}
+.heart-mid::after{background:linear-gradient(90deg,var(--gold),transparent)}
+
+/* ---------- DETAILS ---------- */
+.detail-row{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed rgba(201,162,39,.5)}
+.detail-row:last-child{border-bottom:none}
+.icon{flex:0 0 46px;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--maroon2),var(--maroon));color:#FFEFC0;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 6px 14px rgba(92,10,30,.25)}
+.detail-row h4{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.14em;color:var(--gold-dark);text-transform:uppercase}
+.detail-row p{font-size:14px;line-height:1.6;color:#4A2C1A;margin-top:3px}
+.detail-row p b{color:var(--maroon)}
+.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 10px;border-radius:999px;font-size:12.5px;font-weight:600;text-decoration:none;cursor:pointer;border:none;font-family:'Poppins';text-align:center}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold-dark));color:#3D0512;box-shadow:0 8px 18px rgba(154,123,26,.35)}
+.btn-maroon{background:linear-gradient(135deg,var(--maroon2),var(--maroon));color:#FFEFC0;box-shadow:0 8px 18px rgba(92,10,30,.3)}
+.btn-outline{background:#fff;border:1.5px solid var(--gold);color:var(--maroon)}
+.btn-full{width:100%}
+
+/* ---------- TIMELINE ---------- */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:10px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),var(--maroon2))}
+.t-item{position:relative;padding:0 0 18px}
+.t-item::before{content:"";position:absolute;left:-24px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--gold2);border:3px solid #fff;box-shadow:0 0 0 2px var(--gold)}
+.t-item h4{font-family:'Playfair Display',serif;color:var(--maroon);font-size:16px}
+.t-item .time{font-size:11px;letter-spacing:.12em;color:var(--gold-dark);font-weight:700;text-transform:uppercase}
+.t-item p{font-size:13px;color:var(--muted);line-height:1.6;margin-top:2px}
+
+/* ---------- IMAGE BANNER ---------- */
+.banner{border-radius:18px;overflow:hidden;border:2px solid var(--gold);box-shadow:0 16px 36px rgba(92,10,30,.2);position:relative}
+.banner img{width:100%;height:340px;object-fit:cover;display:block}
+.banner .cap{position:absolute;left:0;right:0;bottom:0;padding:28px 16px 14px;background:linear-gradient(transparent,rgba(61,5,18,.92));color:#FFEFC0;text-align:center}
+.banner .cap b{font-family:'Playfair Display',serif;font-size:17px;display:block}
+.banner .cap span{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold3)}
+
+/* ---------- RSVP ---------- */
+.field{margin-bottom:12px}
+.field label{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--gold-dark);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1.5px solid rgba(201,162,39,.6);border-radius:12px;background:#FFFEF8;font-family:'Poppins';font-size:14px;color:var(--text);outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--maroon2);box-shadow:0 0 0 3px rgba(123,30,43,.12)}
+.attend{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.attend label{border:1.5px solid rgba(201,162,39,.6);border-radius:12px;padding:12px;text-align:center;cursor:pointer;font-size:13px;font-weight:600;color:var(--muted);text-transform:none;letter-spacing:0;margin:0;background:#fff}
+.attend input{display:none}
+.attend input:checked + span{color:var(--maroon)}
+.attend label:has(input:checked){background:#FFF3D6;border-color:var(--maroon2);color:var(--maroon)}
+
+/* ---------- FOOTER ---------- */
+.footer{background:linear-gradient(180deg,var(--maroon),var(--maroon3));color:#F5D9D9;text-align:center;padding:30px 20px 110px;margin-top:26px}
+.footer h3{font-family:'Great Vibes',cursive;font-size:34px;color:#FFF3C4;font-weight:400}
+.footer p{font-size:12.5px;line-height:1.8;color:#E8CFCF}
+.footer a{color:var(--gold3);text-decoration:none;font-weight:600}
+.footer .phones{margin-top:12px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.footer .phones a{border:1px solid rgba(241,210,122,.5);padding:8px 14px;border-radius:999px;font-size:12px}
+
+/* ---------- FLOATING ---------- */
+.fab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;z-index:70;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(61,5,18,.97);border-top:1px solid var(--gold);padding:8px 8px calc(8px + env(safe-area-inset-bottom))}
+.fab-bar a{display:flex;flex-direction:column;align-items:center;gap:2px;color:#FFEFC0;text-decoration:none;font-size:9px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:6px 2px;border-radius:10px}
+.fab-bar a span{font-size:19px}
+.fab-bar a:active{background:rgba(212,175,55,.2)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(20px);background:var(--maroon);color:#FFEFC0;padding:12px 20px;border-radius:999px;font-size:13px;z-index:90;opacity:0;pointer-events:none;transition:.4s;box-shadow:0 10px 24px rgba(0,0,0,.3);border:1px solid var(--gold);white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<audio id="weddingMusic" preload="none" loop>
+  <source src="wedding-music.mp3" type="audio/mpeg">
+</audio>
+<canvas id="petals"></canvas>
+
+<!-- ENVELOPE -->
+<div id="envelope">
+  <div class="env-card">
+    <div class="env-om">ॐ</div>
+    <div class="env-small">Shubhamasthu &nbsp;•&nbsp; Avighnamasthu</div>
+    <div class="env-names">Sai Prasanna <span>weds</span> Mohan</div>
+    <div class="env-date">SATURDAY &nbsp;•&nbsp; 21 NOV 2026</div>
+    <p class="env-text">With the blessings of our elders,<br>we invite you to celebrate our wedding.<br>Please tap below to open your invitation.</p>
+    <button class="btn-open" id="openBtn">✦ &nbsp;OPEN INVITATION&nbsp; ✦</button>
+    <div class="env-hint">Sri Balaji Grand Convention Center, Beeramguda, Hyderabad</div>
+  </div>
+</div>
+
+<div class="app">
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="brand">S ❤️ M<small>Sai Prasanna &amp; Mohan</small></div>
+    <div class="lang-toggle" role="tablist">
+      <button id="btnEN" class="active" onclick="setLang('en')">EN</button>
+      <button id="btnTE" onclick="setLang('te')">తెలుగు</button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <svg class="mandala" viewBox="0 0 200 200" fill="none" stroke="#F1D27A" stroke-width="0.6">
+      <circle cx="100" cy="100" r="95"/><circle cx="100" cy="100" r="75"/><circle cx="100" cy="100" r="55"/>
+      <g id="petalsSvg"></g>
+    </svg>
+    <div class="hero-inner">
+      <div class="shubh">✦ Shubhamasthu ✦</div>
+      <div class="ganesha">🪔</div>
+      <div class="shubh" style="letter-spacing:.25em;font-size:9px">Pottasiri’s Wedding Invitation</div>
+      <h1>Sai Prasanna <span class="amp">❤️</span><br>Mohan</h1>
+      <p class="tag">"With joy, we invite you to celebrate a beautiful beginning..."</p>
+      <div class="date-pill">📅 <span>Saturday</span> <b>21</b> <span>Nov 2026</span> <span>•</span> <span>08:52 PM</span></div>
+      <div class="arch-wrap">
+        <div class="arch"><img src="images/couple-real-web.jpg" alt="Mohan and Sai Prasanna at their wedding" width="900" height="600" fetchpriority="high"></div>
+        <div class="arch-caption">✦ The Wedding Couple ✦</div>
+      </div>
+    </div>
+    <div class="hero-bottom"></div>
+  </header>
+
+  <!-- COUNTDOWN -->
+  <section class="section reveal">
+    <div class="sec-head"><div class="kicker">Counting the moments</div><h2>Until We Say Forever</h2><div class="divider"><span>❦</span></div></div>
+    <div class="count-grid">
+      <div class="count-box"><b id="d">--</b><small>Days</small></div>
+      <div class="count-box"><b id="h">--</b><small>Hours</small></div>
+      <div class="count-box"><b id="m">--</b><small>Minutes</small></div>
+      <div class="count-box"><b id="s">--</b><small>Seconds</small></div>
+    </div>
+  </section>
+
+  <!-- INVITATION -->
+  <section class="section reveal">
+    <div class="sec-head"><div class="kicker">With Blessings</div><h2>Invitation</h2><div class="divider"><span>❦</span></div></div>
+    <div class="card">
+      <div id="invEN">
+        <p>We solicit your gracious presence with family &amp; friends on the auspicious occasion of the marriage of our elder daughter</p>
+        <p style="margin-top:12px"><b>Chi. La. Sow. Sai Prasanna</b><br><span style="font-size:12px;color:var(--muted)">Elder D/o. Sri Pottasiri Srinivasa Rao &amp; Smt. Nagendra</span></p>
+        <p style="margin:10px 0;font-family:'Great Vibes',cursive;font-size:28px;color:var(--maroon2)">with</p>
+        <p><b>Chi. Mohan</b><br><span style="font-size:12px;color:var(--muted)">Elder S/o. Late Ponnamanada Ramakrishna &amp; Ananthalaxmi<br>R/o. Konaseema</span></p>
+        <p style="margin-top:14px;font-size:12.5px">Your presence and blessings will make our celebration complete. Please join us to shower your love on the couple.</p>
+      </div>
+      <div id="invTE" class="telugu hidden">
+        <p>మా పెద్ద కుమార్తె <b>చి.ల.సౌ. సాయి ప్రసన్న</b> (శ్రీ పొట్టసిరి శ్రీనివాసరావు గారు - శ్రీమతి నాగేంద్ర గారి పెద్ద కుమార్తె) వివాహ శుభకార్యమునకు</p>
+        <p style="margin:10px 0;font-family:'Great Vibes',cursive;font-size:28px;color:var(--maroon2)">with</p>
+        <p><b>చి. మోహన్</b> (కీ.శే. పొన్నమంద రామకృష్ణ - అనంతలక్ష్మి గారి పెద్ద కుమారుడు, కోనసీమ) తో నిశ్చయించబడింది.</p>
+        <p style="margin-top:14px;font-size:13px">కుటుంబ సమేతంగా విచ్చేసి నవదంపతులను ఆశీర్వదించవలసిందిగా మనస్ఫూర్తిగా కోరుకుంటున్నాము.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUPLE -->
+  <section class="section reveal">
+    <div class="sec-head"><div class="kicker">The Bride &amp; Groom</div><h2>Our Couple</h2><div class="divider"><span>❦</span></div></div>
+    <div class="couple-grid">
+      <div class="person">
+        <div class="avatar">S</div>
+        <div class="role">The Bride</div>
+        <h3>Chi. La. Sow.<br>Sai Prasanna</h3>
+        <p>Elder Daughter of<br>Sri Pottasiri Srinivasa Rao<br>&amp; Smt. Nagendra</p>
+      </div>
+      <div class="person">
+        <div class="avatar">M</div>
+        <div class="role">The Groom</div>
+        <h3>Chi. Mohan</h3>
+        <p>Elder Son of<br>Late Ponnamanada Ramakrishna<br>&amp; Ananthalaxmi, Konaseema</p>
+      </div>
+    </div>
+    <div class="heart-mid">❤️</div>
+    <p style="text-align:center;font-size:12px;color:var(--muted)">Together with their families, they begin a lifetime of love, laughter &amp; togetherness.</p>
+  </section>
+
+  <!-- WHEN & WHERE -->
+  <section class="section reveal">
+    <div class="sec-head"><div class="kicker">Save the Date</div><h2>When &amp; Where</h2><div class="divider"><span>❦</span></div></div>
+    <div class="card">
+      <div class="detail-row"><div class="icon">🕗</div><div><h4>Sumuhurtham</h4><p><b>Saturday, 21st November 2026</b><br>at <b>08:52 PM</b> — <b>"Mithuna Lagnam"</b></p></div></div>
+      <div class="detail-row"><div class="icon">🍽️</div><div><h4>Dinner</h4><p><b>Saturday, 21st Nov 2026</b><br><b>07:30 PM onwards</b> at the Venue</p></div></div>
+      <div class="detail-row"><div class="icon">📍</div><div><h4>Venue</h4><p><b>Sri Balaji Grand Convention Center</b><br>Beeramguda, Hyderabad</p></div></div>
+      <div class="btn-row">
+        <a class="btn btn-maroon" href="https://www.google.com/maps/search/?api=1&query=Sri+Balaji+Grand+Convention+Center+Beeramguda+Hyderabad" target="_blank" rel="noopener">🗺️ View Map</a>
+        <button class="btn btn-gold" onclick="addToCalendar()">📅 Add to Calendar</button>
+      </div>
+      <button class="btn btn-outline btn-full" style="margin-top:10px" onclick="shareInvite()">↗ Share Invitation</button>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section reveal">
+    <div class="sec-head"><div class="kicker">Order of the Evening</div><h2>Celebration Timeline</h2><div class="divider"><span>❦</span></div></div>
+    <div class="card"><div class="timeline">
+      <div class="t-item"><div class="time">07:30 PM onwards</div><h4>🍽️ Dinner &amp; Guest Arrival</h4><p>Guests are warmly welcomed. Dinner begins at the venue.</p></div>
+      <div class="t-item"><div class="time">08:52 PM</div><h4>💍 Sumuhurtham — Mithuna Lagnam</h4><p>The auspicious wedding ceremony of Mohan &amp; Sai Prasanna.</p></div>
+      <div class="t-item"><div class="time">After Muhurtham</div><h4>🎉 Blessings &amp; Celebrations</h4><p>Photos, blessings and joyful celebrations with family &amp; friends.</p></div>
+    </div></div>
+  </section>
+
+  <!-- BLESSING BANNER -->
+  <section class="section reveal">
+    <div class="banner">
+      <img src="images/kalyanam.jpg" alt="Divine Kalyanam blessing artwork">
+      <div class="cap"><span>With Divine Blessings</span><b>May their union be blessed with happiness, prosperity &amp; dharma</b></div>
+    </div>
+  </section>
+
+  <!-- INVITED BY -->
+  <section class="section reveal">
+    <div class="sec-head"><div class="kicker">With Love &amp; Respect</div><h2>Invited By</h2><div class="divider"><span>❦</span></div></div>
+    <div class="card" style="text-align:center">
+      <p style="font-family:'Playfair Display',serif;font-size:17px;color:var(--maroon)"><b>Sri Pottasiri Srinivasa Rao</b><br><span style="font-size:14px">— Smt. Nagendra</span></p>
+      <div class="divider" style="max-width:160px"><span>❦</span></div>
+      <p style="font-size:12px;margin-top:10px">With best compliments from<br><b>Near &amp; Dear</b></p>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="section reveal" id="rsvp">
+    <div class="sec-head"><div class="kicker">Kindly Respond</div><h2>RSVP</h2><div class="divider"><span>❦</span></div></div>
+    <div class="card">
+      <form id="rsvpForm">
+        <div class="field"><label for="rName">Your Name</label><input id="rName" type="text" placeholder="e.g. Ramesh Kumar" required></div>
+        <div class="field"><label>Will you attend?</label>
+          <div class="attend">
+            <label><input type="radio" name="attend" value="Joyfully Accept" checked><span>🎉 Joyfully Accept</span></label>
+            <label><input type="radio" name="attend" value="Regretfully Decline"><span>🙏 Regretfully Decline</span></label>
+          </div>
+        </div>
+        <div class="field"><label for="rGuests">Number of Guests</label>
+          <select id="rGuests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select>
+        </div>
+        <div class="field"><label for="rMsg">Blessings / Message (optional)</label><textarea id="rMsg" rows="3" placeholder="Write your blessings for the couple..."></textarea></div>
+        <button type="submit" class="btn btn-maroon btn-full" style="padding:15px">💬 Send RSVP on WhatsApp</button>
+        <p style="font-size:11px;color:var(--muted);text-align:center;margin-top:10px">Your reply will open in WhatsApp to the bride’s family: <b>99895 83370</b>.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div style="font-size:28px">🪔</div>
+    <h3>Sai Prasanna ❤️ Mohan</h3>
+    <p>21st November 2026 • 08:52 PM<br>Sri Balaji Grand Convention Center, Beeramguda, Hyderabad</p>
+    <p style="margin-top:10px">With love and blessings,<br>Sri Pottasiri Srinivasa Rao &amp; Smt. Nagendra</p>
+    <p style="margin-top:18px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#B98A8A">Made with ❤️ for a beautiful beginning</p>
+  </footer>
+</div>
+
+<!-- FLOATING BAR -->
+<nav class="fab-bar">
+  <a href="#rsvp"><span>💌</span>RSVP</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Sri+Balaji+Grand+Convention+Center+Beeramguda+Hyderabad" target="_blank" rel="noopener"><span>📍</span>Venue</a>
+  <a href="https://wa.me/919989583370?text=Hello%21%20I%20would%20like%20to%20RSVP%20for%20Sai%20Prasanna%20%26%20Mohan%27s%20wedding%20on%2021%20Nov%202026." target="_blank" rel="noopener"><span>💬</span>WhatsApp</a>
+  <a href="#" onclick="shareInvite();return false"><span>↗</span>Share</a>
+</nav>
+
+<div class="toast" id="toast">✨</div>
+
+<script>
+// Mandala petals SVG
+(function(){
+  const g=document.getElementById('petalsSvg'); let s='';
+  for(let i=0;i<24;i++){const a=i*15*Math.PI/180;const x1=100+Math.cos(a)*55,y1=100+Math.sin(a)*55,x2=100+Math.cos(a)*95,y2=100+Math.sin(a)*95;s+=`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`}
+  g.innerHTML=s;
+})();
+
+// Music autoplay: unmuted autoplay is blocked by many mobile browsers until a user tap.
+// Start it automatically as soon as the guest taps Open Invitation; no music control is shown.
+const weddingMusic=document.getElementById('weddingMusic');
+weddingMusic.volume=.42;
+function startWeddingMusic(){
+  weddingMusic.play().catch(()=>{
+    // If the browser blocks playback or the MP3 is not uploaded, the invitation still works silently.
+  });
+}
+
+// Envelope
+document.getElementById('openBtn').addEventListener('click',()=>{
+  document.getElementById('envelope').classList.add('open');
+  showToast('🪔 Welcome! You are invited to Sai Prasanna & Mohan’s wedding');
+  startWeddingMusic();
+  setTimeout(()=>window.scrollTo({top:0,behavior:'smooth'}),100);
+});
+
+// Language toggle
+function setLang(l){
+  document.getElementById('btnEN').classList.toggle('active',l==='en');
+  document.getElementById('btnTE').classList.toggle('active',l==='te');
+  document.getElementById('invEN').classList.toggle('hidden',l!=='en');
+  document.getElementById('invTE').classList.toggle('hidden',l!=='te');
+}
+
+// Countdown — 21 Nov 2026 20:52 IST
+const target=new Date('2026-11-21T20:52:00+05:30').getTime();
+function tick(){
+  const now=Date.now(); let diff=Math.max(0,target-now);
+  const d=Math.floor(diff/86400000); diff%=86400000;
+  const h=Math.floor(diff/3600000); diff%=3600000;
+  const m=Math.floor(diff/60000); const s=Math.floor(diff%60000/1000);
+  dEl.textContent=d; hEl.textContent=String(h).padStart(2,'0'); mEl.textContent=String(m).padStart(2,'0'); sEl.textContent=String(s).padStart(2,'0');
+}
+const dEl=document.getElementById('d'),hEl=document.getElementById('h'),mEl=document.getElementById('m'),sEl=document.getElementById('s');
+tick(); setInterval(tick,1000);
+
+// Reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Toast
+let toastT;
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),3200)}
+
+// Add to Calendar (ICS)
+function addToCalendar(){
+  const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Pottasiri Wedding Invitation//EN','BEGIN:VEVENT','UID:pottasiri-saiprasanna-20261121@wedding','DTSTAMP:20261113T060000Z','DTSTART:20261121T152200Z','DTEND:20261121T183000Z','SUMMARY:Sai Prasanna weds Mohan — Wedding (Mithuna Lagnam 08:52 PM)','LOCATION:Sri Balaji Grand Convention Center\\, Beeramguda\\, Hyderabad','DESCRIPTION:Dinner from 07:30 PM onwards. Sumuhurtham at 08:52 PM — Mithuna Lagnam.','END:VEVENT','END:VCALENDAR'].join('\r\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));a.download='Sai-Prasanna-Mohan-Wedding.ics';a.click();
+  showToast('📅 Added! Check your calendar');
+}
+
+// Share
+async function shareInvite(){
+  const data={title:'Pottasiri’s Wedding Invitation — Sai Prasanna & Mohan',text:'You are warmly invited! Sai Prasanna weds Mohan on Saturday, 21 Nov 2026 at 08:52 PM, Sri Balaji Grand Convention Center, Beeramguda, Hyderabad. Dinner from 07:30 PM.',url:location.href};
+  if(navigator.share){try{await navigator.share(data)}catch(e){}}
+  else{try{await navigator.clipboard.writeText(data.text+' '+data.url);showToast('🔗 Invitation link copied!')}catch(e){showToast('Please copy the link from your browser')}}
+}
+
+// Bride-side RSVP -> WhatsApp (+91 99895 83370)
+document.getElementById('rsvpForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=document.getElementById('rName').value.trim()||'Guest';
+  const attend=document.querySelector('input[name="attend"]:checked').value;
+  const guests=document.getElementById('rGuests').value;
+  const msg=document.getElementById('rMsg').value.trim();
+  let text=`🪔 *Bride-side RSVP — Sai Prasanna & Mohan*\n\nName: ${name}\nResponse: ${attend}\nGuests: ${guests}`;
+  if(msg)text+=`\nBlessings: ${msg}`;
+  text+=`\n\n— Sent from the Pottasiri family wedding invitation`;
+  window.open('https://wa.me/919989583370?text='+encodeURIComponent(text),'_blank');
+  showToast('💬 Opening WhatsApp...');
+});
+
+// Falling petals
+const cv=document.getElementById('petals'),ctx=cv.getContext('2d');
+let W,H,petals=[];
+function resize(){W=cv.width=520;H=cv.height=innerHeight}
+resize();addEventListener('resize',resize);
+const COLORS=['#E8A0B4','#F1D27A','#D4AF37','#F5C6D6','#C9A227'];
+function makePetal(init){return{x:Math.random()*W,y:init?Math.random()*H:-20,r:4+Math.random()*6,s:.6+Math.random()*1.4,drift:(Math.random()-.5)*1.2,rot:Math.random()*Math.PI,vr:(Math.random()-.5)*.05,c:COLORS[Math.floor(Math.random()*COLORS.length)],o:.5+Math.random()*.5}}
+for(let i=0;i<28;i++)petals.push(makePetal(true));
+(function loop(){
+  ctx.clearRect(0,0,W,H);
+  petals.forEach((p,i)=>{
+    p.y+=p.s;p.x+=p.drift+Math.sin(p.y*.02)*.4;p.rot+=p.vr;
+    if(p.y>H+20)petals[i]=makePetal(false);
+    ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.globalAlpha=p.o;ctx.fillStyle=p.c;
+    ctx.beginPath();ctx.ellipse(0,0,p.r,p.r*.55,0,0,Math.PI*2);ctx.fill();ctx.restore();
+  });
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
